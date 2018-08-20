@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <link type="text/css" rel="stylesheet" href="css/css.css"  media="screen,projection"/>
+
+        <!--Import style-custom.css-->
+        <link type="text/css" rel="stylesheet" href="css/style-custom.css"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Sobre</title>
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <h:form>
+                        <li><a href="pagina1.xhtml">Home</a></li>
+                        <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+                    </h:form>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <h:form>
+                <li><a href="pagina1.xhtml">Home</a></li>
+                <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+            </h:form>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="text center"><b>Cultura Organizacional</b></h5>
+                    <div class="primeiroParagrafo">
+                        <p>O termo cultura organizacional foi criado no ano de 1982 pelo cientista
+                            Edgard Schein, Phd em Harvard e professor do MIT(Instituto de
+                            Tecnologia de Massachusetts). Schein define a cultura organizacional como:</p>
+                    </div>
+                    <div class="segundoParagrafo">
+                        <p>Cultura Organizacional é o conjunto de pressupostos básicos que um grupo
+                            inventou, descobriu ou desenvolveu ao aprender como lidar com os
+                            problemas de adaptação externa e integração interna e que funcionaram
+                            bem o suficiente para serem considerados válidos e ensinados a novos
+                            membros como a forma correta de perceber, pensar e sentir em relação a
+                            esses problemas (SCHEIN, 1984, citado por Bertoia, Rossi e Shiniashiki, 2005 p. 6).</p>
+                    </div>
+                    <div class="terceiroParagrafo">
+                        <p>Podemos dizer que a cultura organizacional está subentendida em cada
+                            organização, expressando as normas, valores, crenças e proporcionando identidade
+                            e personalidade a cada uma delas. Visando abordar o tema citado acima, este
+                            software busca analisar e elaborar um diagnóstico do clima organizacional através
+                            de um questionário de características fundamentais existentes nas organizações
+                            atuais. O Questionário utilizado foi baseado no questionário elaborado
+                            por Sílvia Marina Clérigo Moço em sua dissertação de mestrado em
+                            gestão de recursos humanos defendida em Lisboa no dia 30 de Setembro de 2011.</p>
+                    </div>
+                    <div class="referencias">
+                        <h6><b>Referências</b></h6>
+
+                        <p>BERTOIA, Natacha; Orsi,A. ; Marinho, Eduardo ; SHINYASHIKI, R. . <b>Cultura Organizacional do 3º setor.</b> Revista Gestão do Conhecimento (Curitiba), v. 3, p. 12-20, 2005.</p>
+
+                        <p>MARINA, Sílvia C. M. <b>Proposta de Modelo de Avaliação do Clima Organizacional em
+                                Contexto de Organização do Terceiro Sector de Pequena Dimensão.</b> Comunidade de
+                            Inserção “O Companheiro”, Lisboa, 2011.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </h:body>
+</html>
+

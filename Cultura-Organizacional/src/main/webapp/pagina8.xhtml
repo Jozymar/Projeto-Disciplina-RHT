@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Import style-custom.css-->
+        <link type="text/css" rel="stylesheet" href="css/style-custom.css"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Home</title>
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <h:form>
+                        <li><a href="sobre.xhtml">Sobre</a></li>
+                        <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+                    </h:form>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <h:form>
+                <li><a href="sobre.xhtml">Sobre</a></li>
+                <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+            </h:form>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+
+                    <div class="collection">
+                        <h6 class="collection-item black-text">Avaliação / Motivação</h6>
+                    </div>
+
+                    <h:form>
+
+                        <div class="collection">
+                            <p class="collection-item">49 - Nesta Associação as pessoas dão sempre o melhor de si mesmas.</p>
+                            <p:selectOneRadio id="resposta1" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta1}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">50 - As pessoas desta Associação gostam do que estão a fazer.</p>
+                            <p:selectOneRadio id="resposta2" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta2}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">51 - Os colaboradores estão preparados para fazer um esforço adicional, de forma a terem um bom
+                                desempenho.</p>
+                            <p:selectOneRadio id="resposta3" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta3}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">52 - Os colaboradores não se esforçam mais do que necessário para realizarem o seu trabalho.</p>
+                            <p:selectOneRadio id="resposta4" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta4}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">53 - O feedback que recebo no trabalho contribui enquanto fator motivacional.</p>
+                            <p:selectOneRadio id="resposta5" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta5}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">54 - Nesta Associação, os colaboradores não fazem a mínima ideia se estão ou não a desenvolver um bom
+                                trabalho.</p>
+                            <p:selectOneRadio id="resposta6" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta6}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">55 - Considero que as motivações periódicas me motivam.</p>
+                            <p:selectOneRadio id="resposta7" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta7}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">56 - O desempenho das pessoas é avaliado de forma regular.</p>
+                            <p:selectOneRadio id="resposta8" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta8}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">57 - Raramente se avalia a forma como os Colaboradores fazem o trabalho.</p>
+                            <p:selectOneRadio id="resposta9" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta9}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">58 - Nesta Associação, espera-se que as pessoas façam demasiado trabalho num dia de serviço.</p>
+                            <p:selectOneRadio id="resposta10" value="#{controladorAvaliacaoMotivacao.avaliacaoMotivacao.resposta10}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <br/><br/>
+                        <div class="col s12 center">
+                            <button class="btn waves-effect waves-light blue-grey darken-3 center" jsf:action="#{controladorAvaliacaoMotivacao.cadastrar()}">Próximo
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </h:form>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </h:body>
+</html>
+

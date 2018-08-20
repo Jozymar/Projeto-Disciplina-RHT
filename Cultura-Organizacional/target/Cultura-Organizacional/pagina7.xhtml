@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Import style-custom.css-->
+        <link type="text/css" rel="stylesheet" href="css/style-custom.css"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Home</title>
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <h:form>
+                        <li><a href="sobre.xhtml">Sobre</a></li>
+                        <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+                    </h:form>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <h:form>
+                <li><a href="sobre.xhtml">Sobre</a></li>
+                <li><a jsf:action="#{controladorUsuario.realizarLogout()}">Sair</a></li>
+            </h:form>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+
+                    <div class="collection">
+                        <h6 class="collection-item black-text">Envolvimento</h6>
+                    </div>
+
+                    <h:form>
+
+                        <div class="collection">
+                            <p class="collection-item">41 - Posso contar com o apoio e envolvimento da direção e Gabinetes com quem me relaciono.</p>
+                            <p:selectOneRadio id="resposta1" value="#{controladorEnvolvimento.envolvimento.resposta1}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">42 - Existe espírito de cooperação entre as diferentes equipes da direção.</p>
+                            <p:selectOneRadio id="resposta2" value="#{controladorEnvolvimento.envolvimento.resposta2}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">43 - Os acontecimentos relevantes da vida organizacional são divulgados de forma compreensível e atempadamente junto dos colaboradores.</p>
+                            <p:selectOneRadio id="resposta3" value="#{controladorEnvolvimento.envolvimento.resposta3}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">44 - A organização promove momentos de encontro entre colaboradores.</p>
+                            <p:selectOneRadio id="resposta4" value="#{controladorEnvolvimento.envolvimento.resposta4}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">45 - Existe uma boa comunicação e partilha de informação entre a Direção e a administração da
+                                organização.</p>
+                            <p:selectOneRadio id="resposta5" value="#{controladorEnvolvimento.envolvimento.resposta5}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">46 - Existe uma cultura comum, partilhada por toda a organização.</p>
+                            <p:selectOneRadio id="resposta6" value="#{controladorEnvolvimento.envolvimento.resposta6}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">47 - Os resultados e sucessos são partilhados por toda a organização.</p>
+                            <p:selectOneRadio id="resposta7" value="#{controladorEnvolvimento.envolvimento.resposta7}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <div class="collection">
+                            <p class="collection-item">48 - Possuo aptidão no relacionamento com os outros colaboradores, estabelecendo uma boa comunicação e
+                                participando dos inventos internos e externos da empresa.</p>
+                            <p:selectOneRadio id="resposta8" value="#{controladorEnvolvimento.envolvimento.resposta8}" required="true">
+                                <f:selectItem itemLabel="Discordo Totalmente" itemValue="Discordo Totalmente" />
+                                <f:selectItem itemLabel="Discordo Moderadamente" itemValue="Discordo Moderadamente" />
+                                <f:selectItem itemLabel="Não Concordo Nem Discordo" itemValue="Não Concordo Nem Discordo" />
+                                <f:selectItem itemLabel="Concordo Moderadamente" itemValue="Concordo Moderadamente" />
+                                <f:selectItem itemLabel="Concordo Totalmente" itemValue="Concordo Totalmente" />
+                            </p:selectOneRadio>
+                        </div>
+
+                        <br/><br/>
+                        <div class="col s12 center">
+                            <button class="btn waves-effect waves-light blue-grey darken-3 center" jsf:action="#{controladorEnvolvimento.cadastrar()}">Próximo
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </h:form>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </h:body>
+</html>
+
