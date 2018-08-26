@@ -11,4 +11,12 @@ public interface EnvolvimentoDao {
     public void cadastrar(Envolvimento envolvimento);
     
     public Long consultarPorDiscordoTotalmente();
+
+    public Long consultarPorDiscordoModeradamente();
+
+    public Long consultarPorNaoConcordoNemDiscordo();
+
+    public Long consultarPorConcordoModeradamente();
+
+    public Long consultarPorConcordoTotalmente();
 }

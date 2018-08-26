@@ -11,4 +11,12 @@ public interface RemuneracaoDao {
     public void cadastrar(Remuneracao remuneracao);
     
     public Long consultarPorDiscordoTotalmente();
+
+    public Long consultarPorDiscordoModeradamente();
+
+    public Long consultarPorNaoConcordoNemDiscordo();
+
+    public Long consultarPorConcordoModeradamente();
+
+    public Long consultarPorConcordoTotalmente();
 }

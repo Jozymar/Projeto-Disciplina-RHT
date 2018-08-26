@@ -11,4 +11,12 @@ public interface InvestimentoEDespesasFamiliaresDao {
     public void cadastrar(InvestimentoEDespesasFamiliares investimentoEDespesasFamiliares);
     
     public Long consultarPorDiscordoTotalmente();
+
+    public Long consultarPorDiscordoModeradamente();
+
+    public Long consultarPorNaoConcordoNemDiscordo();
+
+    public Long consultarPorConcordoModeradamente();
+
+    public Long consultarPorConcordoTotalmente();
 }

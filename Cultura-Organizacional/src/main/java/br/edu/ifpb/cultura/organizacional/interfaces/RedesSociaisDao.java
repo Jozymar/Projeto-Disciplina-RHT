@@ -11,4 +11,12 @@ public interface RedesSociaisDao {
     public void cadastrar(RedesSociais redesSociais);
     
     public Long consultarPorDiscordoTotalmente();
+
+    public Long consultarPorDiscordoModeradamente();
+
+    public Long consultarPorNaoConcordoNemDiscordo();
+
+    public Long consultarPorConcordoModeradamente();
+
+    public Long consultarPorConcordoTotalmente();
 }

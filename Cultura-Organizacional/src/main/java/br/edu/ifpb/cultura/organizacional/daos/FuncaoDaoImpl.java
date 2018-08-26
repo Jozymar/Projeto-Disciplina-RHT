@@ -42,4 +42,88 @@ public class FuncaoDaoImpl implements FuncaoDao {
                      createQuery4.getSingleResult();
         return total;
     }
+    
+    @Override
+    public Long consultarPorDiscordoModeradamente() {
+        String jqpl1 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta1=:resposta";
+        String jqpl2 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta2=:resposta";
+        String jqpl3 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta3=:resposta";
+        String jqpl4 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta4=:resposta";
+        TypedQuery<Long> createQuery = entityManager.createQuery(jqpl1, Long.class);
+        TypedQuery<Long> createQuery2 = entityManager.createQuery(jqpl2, Long.class);
+        TypedQuery<Long> createQuery3 = entityManager.createQuery(jqpl3, Long.class);
+        TypedQuery<Long> createQuery4 = entityManager.createQuery(jqpl4, Long.class);
+        createQuery.setParameter("resposta", "Discordo Moderadamente");
+        createQuery2.setParameter("resposta", "Discordo Moderadamente");
+        createQuery3.setParameter("resposta", "Discordo Moderadamente");
+        createQuery4.setParameter("resposta", "Discordo Moderadamente");
+        Long total = createQuery.getSingleResult() +
+                     createQuery2.getSingleResult() +
+                     createQuery3.getSingleResult() +
+                     createQuery4.getSingleResult();
+        return total;
+    }
+    
+    @Override
+    public Long consultarPorNaoConcordoNemDiscordo() {
+        String jqpl1 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta1=:resposta";
+        String jqpl2 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta2=:resposta";
+        String jqpl3 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta3=:resposta";
+        String jqpl4 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta4=:resposta";
+        TypedQuery<Long> createQuery = entityManager.createQuery(jqpl1, Long.class);
+        TypedQuery<Long> createQuery2 = entityManager.createQuery(jqpl2, Long.class);
+        TypedQuery<Long> createQuery3 = entityManager.createQuery(jqpl3, Long.class);
+        TypedQuery<Long> createQuery4 = entityManager.createQuery(jqpl4, Long.class);
+        createQuery.setParameter("resposta", "Não Concordo Nem Discordo");
+        createQuery2.setParameter("resposta", "Não Concordo Nem Discordo");
+        createQuery3.setParameter("resposta", "Não Concordo Nem Discordo");
+        createQuery4.setParameter("resposta", "Não Concordo Nem Discordo");
+        Long total = createQuery.getSingleResult() +
+                     createQuery2.getSingleResult() +
+                     createQuery3.getSingleResult() +
+                     createQuery4.getSingleResult();
+        return total;
+    }
+    
+    @Override
+    public Long consultarPorConcordoModeradamente() {
+        String jqpl1 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta1=:resposta";
+        String jqpl2 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta2=:resposta";
+        String jqpl3 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta3=:resposta";
+        String jqpl4 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta4=:resposta";
+        TypedQuery<Long> createQuery = entityManager.createQuery(jqpl1, Long.class);
+        TypedQuery<Long> createQuery2 = entityManager.createQuery(jqpl2, Long.class);
+        TypedQuery<Long> createQuery3 = entityManager.createQuery(jqpl3, Long.class);
+        TypedQuery<Long> createQuery4 = entityManager.createQuery(jqpl4, Long.class);
+        createQuery.setParameter("resposta", "Concordo Moderadamente");
+        createQuery2.setParameter("resposta", "Concordo Moderadamente");
+        createQuery3.setParameter("resposta", "Concordo Moderadamente");
+        createQuery4.setParameter("resposta", "Concordo Moderadamente");
+        Long total = createQuery.getSingleResult() +
+                     createQuery2.getSingleResult() +
+                     createQuery3.getSingleResult() +
+                     createQuery4.getSingleResult();
+        return total;
+    }
+    
+    @Override
+    public Long consultarPorConcordoTotalmente() {
+        String jqpl1 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta1=:resposta";
+        String jqpl2 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta2=:resposta";
+        String jqpl3 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta3=:resposta";
+        String jqpl4 = "SELECT COUNT(f) FROM Funcao f WHERE f.resposta4=:resposta";
+        TypedQuery<Long> createQuery = entityManager.createQuery(jqpl1, Long.class);
+        TypedQuery<Long> createQuery2 = entityManager.createQuery(jqpl2, Long.class);
+        TypedQuery<Long> createQuery3 = entityManager.createQuery(jqpl3, Long.class);
+        TypedQuery<Long> createQuery4 = entityManager.createQuery(jqpl4, Long.class);
+        createQuery.setParameter("resposta", "Concordo Totalmente");
+        createQuery2.setParameter("resposta", "Concordo Totalmente");
+        createQuery3.setParameter("resposta", "Concordo Totalmente");
+        createQuery4.setParameter("resposta", "Concordo Totalmente");
+        Long total = createQuery.getSingleResult() +
+                     createQuery2.getSingleResult() +
+                     createQuery3.getSingleResult() +
+                     createQuery4.getSingleResult();
+        return total;
+    }
 }

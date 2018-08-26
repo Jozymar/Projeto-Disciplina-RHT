@@ -1,8 +1,7 @@
 package br.edu.ifpb.cultura.organizacional.controladores;
 
-import br.edu.ifpb.cultura.organizacional.entidades.Usuario;
-import br.edu.ifpb.cultura.organizacional.interfaces.UsuarioDao;
-import java.io.IOException;
+import br.edu.ifpb.cultura.organizacional.entidades.Admin;
+import br.edu.ifpb.cultura.organizacional.interfaces.AdminDao;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -20,50 +19,33 @@ import javax.servlet.http.HttpSession;
 @RequestScoped
 public class ControladorAdmin implements Serializable {
     
-    private Usuario usuario;
+    private Admin admin;
     private HttpSession sessao;
 
     @EJB
-    private UsuarioDao usuarioDao;
+    private AdminDao adminDao;
 
     @PostConstruct
     public void instanceObjects() {
-        this.usuario = new Usuario();
-    }
-
-    public String cadastrar() throws IOException {
-        if (usuarioDao.consultarPorEmail(usuario.getEmail()) != null) {
-            mensagemErro("Cadastro", "Já existe um usuário cadastrado "
-                    + "com o e-mail informado!");
-        } else if (usuarioDao.consultarPorNome(usuario.getNome()) != null) {
-            mensagemErro("Cadastro", "Já existe um usuário cadastrado "
-                    + "com o nome informado!");
-        } else {
-            
-            //persisite o usuario no banco
-            usuarioDao.cadastrar(usuario);
-
-            return "loginAdmin.xhtml";
-        }
-        return null;
+        this.admin = new Admin();
     }
 
     public String realizarlogin() {
-        Usuario usuarioLogado = usuarioDao.consultarPorEmail(usuario.getEmail());
-        if (usuarioLogado == null) {
-            mensagemErro("Login", "O usuário informado não está cadastrado!");
+        Admin adminLogado = adminDao.consultarPorEmail(admin.getEmail());
+        if (adminLogado == null) {
+            mensagemErro("Login Admin", "O Admin informado não está cadastrado!");
             return null;
         } else {
-            Usuario usuarioAutenticavel = usuarioDao
-                    .autenticarUsuario(usuario.getEmail(), usuario.getSenha());
-            if (usuarioAutenticavel == null) {
-                mensagemErro("Login", "Os dados informados estão incorretos!");
+            Admin adminAutenticavel = adminDao
+                    .autenticarAdmin(admin.getEmail(), admin.getSenha());
+            if (adminAutenticavel == null) {
+                mensagemErro("Login Admin", "Os dados informados estão incorretos!");
                 return null;
             } else {
                 sessao = (HttpSession) FacesContext.getCurrentInstance()
                         .getExternalContext().getSession(true);
-                sessao.setAttribute("admin", usuarioLogado);
-                sessao.setAttribute("nome", usuarioLogado.getNome());
+                sessao.setAttribute("admin", adminLogado);
+                sessao.setAttribute("nome", adminLogado.getNome());
                 return "graficos.xhtml";
             }
         }
@@ -86,11 +68,11 @@ public class ControladorAdmin implements Serializable {
         FacesContext.getCurrentInstance().addMessage(tituloPagina, mensagemDeErro);
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Admin getAdmin() {
+        return admin;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
     }
 }

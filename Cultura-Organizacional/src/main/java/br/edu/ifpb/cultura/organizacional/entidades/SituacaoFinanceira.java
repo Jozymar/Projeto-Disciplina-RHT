@@ -14,39 +14,36 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class SituacaoFinanceira implements Serializable {
- 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    
+
     @Column(length = 80)
     private String resposta1;
-    
+
     @Column(length = 80)
     private String resposta2;
-    
+
     @Column(length = 80)
     private String resposta3;
-    
+
     @Column(length = 80)
     private String resposta4;
-    
+
     @Column(length = 80)
     private String resposta5;
-    
+
     @Column(length = 80)
     private String resposta6;
-    
-    @Column(length = 80)
-    private String resposta7;
-    
+
     @OneToOne
     private Usuario usuario;
 
     public SituacaoFinanceira() {
     }
 
-    public SituacaoFinanceira(int id, String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, String resposta7, Usuario usuario) {
+    public SituacaoFinanceira(int id, String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, Usuario usuario) {
         this.id = id;
         this.resposta1 = resposta1;
         this.resposta2 = resposta2;
@@ -54,7 +51,6 @@ public class SituacaoFinanceira implements Serializable {
         this.resposta4 = resposta4;
         this.resposta5 = resposta5;
         this.resposta6 = resposta6;
-        this.resposta7 = resposta7;
         this.usuario = usuario;
     }
 
@@ -114,14 +110,6 @@ public class SituacaoFinanceira implements Serializable {
         this.resposta6 = resposta6;
     }
 
-    public String getResposta7() {
-        return resposta7;
-    }
-
-    public void setResposta7(String resposta7) {
-        this.resposta7 = resposta7;
-    }
-
     public Usuario getUsuario() {
         return usuario;
     }
@@ -132,6 +120,6 @@ public class SituacaoFinanceira implements Serializable {
 
     @Override
     public String toString() {
-        return "SituacaoFinanceira{" + "id=" + id + ", resposta1=" + resposta1 + ", resposta2=" + resposta2 + ", resposta3=" + resposta3 + ", resposta4=" + resposta4 + ", resposta5=" + resposta5 + ", resposta6=" + resposta6 + ", resposta7=" + resposta7 + ", usuario=" + usuario + '}';
+        return "SituacaoFinanceira{" + "id=" + id + ", resposta1=" + resposta1 + ", resposta2=" + resposta2 + ", resposta3=" + resposta3 + ", resposta4=" + resposta4 + ", resposta5=" + resposta5 + ", resposta6=" + resposta6 + ", usuario=" + usuario + '}';
     }
 }

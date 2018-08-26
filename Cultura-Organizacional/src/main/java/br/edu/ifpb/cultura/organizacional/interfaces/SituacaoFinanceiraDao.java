@@ -11,4 +11,12 @@ public interface SituacaoFinanceiraDao {
     public void cadastrar(SituacaoFinanceira situacaoFinanceira);
     
     public Long consultarPorDiscordoTotalmente();
+
+    public Long consultarPorDiscordoModeradamente();
+
+    public Long consultarPorNaoConcordoNemDiscordo();
+
+    public Long consultarPorConcordoModeradamente();
+
+    public Long consultarPorConcordoTotalmente();
 }

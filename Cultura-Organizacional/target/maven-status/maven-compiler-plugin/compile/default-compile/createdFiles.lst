@@ -37,6 +37,7 @@ br/edu/ifpb/cultura/organizacional/controladores/ControladorAssistenciaAosFuncio
 br/edu/ifpb/cultura/organizacional/controladores/ControladorFuncao.class
 br/edu/ifpb/cultura/organizacional/interfaces/ConvivenciaFamiliarDao.class
 br/edu/ifpb/cultura/organizacional/interfaces/ImagemDao.class
+br/edu/ifpb/cultura/organizacional/entidades/Admin_.class
 br/edu/ifpb/cultura/organizacional/entidades/CondicoesDeTrabalho_.class
 br/edu/ifpb/cultura/organizacional/daos/ImagemDaoImpl.class
 br/edu/ifpb/cultura/organizacional/daos/ConvivenciaFamiliarDaoImpl.class
@@ -59,6 +60,7 @@ br/edu/ifpb/cultura/organizacional/controladores/ControladorUsuario.class
 br/edu/ifpb/cultura/organizacional/interfaces/FeriasELazerDao.class
 br/edu/ifpb/cultura/organizacional/interfaces/EstrategiaDao.class
 br/edu/ifpb/cultura/organizacional/interfaces/PoliticaEEconomiaDao.class
+br/edu/ifpb/cultura/organizacional/interfaces/AdminDao.class
 br/edu/ifpb/cultura/organizacional/entidades/EspiritoDeEquipe.class
 br/edu/ifpb/cultura/organizacional/interfaces/InvestimentoEDespesasFamiliaresDao.class
 br/edu/ifpb/cultura/organizacional/entidades/ConvivenciaFamiliar_.class
@@ -74,6 +76,7 @@ br/edu/ifpb/cultura/organizacional/daos/EnvolvimentoDaoImpl.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorLideranca.class
 br/edu/ifpb/cultura/organizacional/entidades/Saude_.class
 br/edu/ifpb/cultura/organizacional/entidades/VidaSocial_.class
+br/edu/ifpb/cultura/organizacional/entidades/Admin.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorAdmin.class
 br/edu/ifpb/cultura/organizacional/daos/SituacaoFinanceiraDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/Envolvimento.class
@@ -86,6 +89,7 @@ br/edu/ifpb/cultura/organizacional/daos/SaudeDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/PoliticaEEconomia_.class
 br/edu/ifpb/cultura/organizacional/entidades/AvaliacaoMotivacao.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorImagem.class
+br/edu/ifpb/cultura/organizacional/daos/AdminDaoImpl.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorAssociacao.class
 br/edu/ifpb/cultura/organizacional/interfaces/AssistenciaAosFuncionariosDao.class
 br/edu/ifpb/cultura/organizacional/entidades/RedesSociais.class

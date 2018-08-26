@@ -14,39 +14,35 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class PoliticaEEconomia implements Serializable {
- 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    
+
     @Column(length = 80)
     private String resposta1;
-    
+
     @Column(length = 80)
     private String resposta2;
-    
+
     @Column(length = 80)
     private String resposta3;
-    
+
     @Column(length = 80)
     private String resposta4;
-    
-    @Column(length = 80)
-    private String resposta5;
-    
+
     @OneToOne
     private Usuario usuario;
 
     public PoliticaEEconomia() {
     }
 
-    public PoliticaEEconomia(int id, String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, Usuario usuario) {
+    public PoliticaEEconomia(int id, String resposta1, String resposta2, String resposta3, String resposta4, Usuario usuario) {
         this.id = id;
         this.resposta1 = resposta1;
         this.resposta2 = resposta2;
         this.resposta3 = resposta3;
         this.resposta4 = resposta4;
-        this.resposta5 = resposta5;
         this.usuario = usuario;
     }
 
@@ -90,14 +86,6 @@ public class PoliticaEEconomia implements Serializable {
         this.resposta4 = resposta4;
     }
 
-    public String getResposta5() {
-        return resposta5;
-    }
-
-    public void setResposta5(String resposta5) {
-        this.resposta5 = resposta5;
-    }
-
     public Usuario getUsuario() {
         return usuario;
     }
@@ -108,6 +96,6 @@ public class PoliticaEEconomia implements Serializable {
 
     @Override
     public String toString() {
-        return "PoliticaEEconomia{" + "id=" + id + ", resposta1=" + resposta1 + ", resposta2=" + resposta2 + ", resposta3=" + resposta3 + ", resposta4=" + resposta4 + ", resposta5=" + resposta5 + ", usuario=" + usuario + '}';
+        return "PoliticaEEconomia{" + "id=" + id + ", resposta1=" + resposta1 + ", resposta2=" + resposta2 + ", resposta3=" + resposta3 + ", resposta4=" + resposta4 + ", usuario=" + usuario + '}';
     }
 }

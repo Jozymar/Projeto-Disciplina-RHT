@@ -4,39 +4,129 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui" 
-      xmlns:b="http://bootsfaces.net/ui" xmlns:jsf="http://xmlns.jcp.org/jsf">
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
 
     <h:head>
-        <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-        <title>Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Import style-custom.css-->
+        <link type="text/css" rel="stylesheet" href="css/style-custom.css"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Gráficos</title>
     </h:head>
+    <style type="text/css">
+        #chartComponent1 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent2 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent3 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent4 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent5 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent6 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent7 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent8 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent9 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent10 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent11 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent12 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent13 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent14 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent15 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent16 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent17 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent18 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent19 table.jqplot-table-legend {width: auto !important;}
+        #chartComponent20 table.jqplot-table-legend {width: auto !important;}
+    </style>
 
     <h:body>
 
-        <b:navBar style="background-color:#37474f;border-radius:0px;">
-            <b:navbarLinks style="float:right;margin:2% -6% 2% 0%;">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <h:form>
+                        <li><a jsf:action="#{controladorAdmin.realizarLogout()}">Sair</a></li>
+                    </h:form>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <h:form>    
+                <li><a jsf:action="#{controladorAdmin.realizarLogout()}">Sair</a></li>
+            </h:form>
+        </ul>
+
+        <div class="container">
+            <div class="row">
+
+                <h4 class="center">Gráficos</h4>
+
+                <p:chart type="pie" id="chartComponent1" model="#{controladorGrafico.pieModel1}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent2" model="#{controladorGrafico.pieModel2}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent3" model="#{controladorGrafico.pieModel3}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent4" model="#{controladorGrafico.pieModel4}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent5" model="#{controladorGrafico.pieModel5}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent6" model="#{controladorGrafico.pieModel6}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent7" model="#{controladorGrafico.pieModel7}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent8" model="#{controladorGrafico.pieModel8}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent9" model="#{controladorGrafico.pieModel9}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent10" model="#{controladorGrafico.pieModel10}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent11" model="#{controladorGrafico.pieModel11}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent12" model="#{controladorGrafico.pieModel12}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent13" model="#{controladorGrafico.pieModel13}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent14" model="#{controladorGrafico.pieModel14}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent15" model="#{controladorGrafico.pieModel15}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent16" model="#{controladorGrafico.pieModel16}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent17" model="#{controladorGrafico.pieModel17}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent18" model="#{controladorGrafico.pieModel18}" style="width:450px;height:350px;float:right;"/>
+
+                <p:chart type="pie" id="chartComponent19" model="#{controladorGrafico.pieModel19}" style="width:450px;height:350px;float:left;"/>
+
+                <p:chart type="pie" id="chartComponent20" model="#{controladorGrafico.pieModel20}" style="width:450px;height:350px;float:right;"/>
+
                 <h:form>
-                    <a style="color:white;" jsf:action="#{controladorAdmin.realizarLogout()}">Sair</a>
+                    <br/><br/>
+                    <div class="col s12 center">
+                        <h:commandLink class="btn waves-effect waves-light blue-grey darken-3 center" action="analise.xhtml">Ver Análise
+                            <i class="material-icons right">send</i>
+                        </h:commandLink>
+                    </div>
                 </h:form>
-            </b:navbarLinks>    
-        </b:navBar>
 
-        <b:container>
+            </div>
+        </div>
 
-            <p:chart type="pie" model="#{controladorGrafico.pieModel1}" style="width:500px;height:400px;float:left;"/>
-
-            <p:chart type="pie" model="#{controladorGrafico.pieModel2}" style="width:500px;height:400px;float:right;"/>
-
-            <p:chart type="pie" model="#{controladorGrafico.pieModel3}" style="width:500px;height:400px;float:left;"/>
-
-            <p:chart type="pie" model="#{controladorGrafico.pieModel4}" style="width:500px;height:400px;float:right;"/>
-
-        </b:container>
     </h:body>
 
     <script type="text/javascript">
         function ext() {
-            this.cfg.seriesDefaults.rendererOptions.dataLabelThreshold = 1;
+            this.cfg.seriesDefaults.rendererOptions.dataLabelThreshold = 0.5;
             this.cfg.seriesDefaults.rendererOptions.dataLabelPositionFactor = 0.6;
         }
     </script>
