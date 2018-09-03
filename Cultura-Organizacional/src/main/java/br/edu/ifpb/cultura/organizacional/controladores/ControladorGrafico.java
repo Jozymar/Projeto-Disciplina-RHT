@@ -295,6 +295,7 @@ public class ControladorGrafico implements Serializable {
         pieModel1.setShadow(false);
         pieModel1.setShowDataLabels(true);
         pieModel1.setExtender("ext");
+        pieModel1.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel1() {
@@ -324,6 +325,7 @@ public class ControladorGrafico implements Serializable {
         pieModel2.setShadow(false);
         pieModel2.setShowDataLabels(true);
         pieModel2.setExtender("ext");
+        pieModel2.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel2() {
@@ -353,6 +355,7 @@ public class ControladorGrafico implements Serializable {
         pieModel3.setShadow(false);
         pieModel3.setShowDataLabels(true);
         pieModel3.setExtender("ext");
+        pieModel3.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel3() {
@@ -382,6 +385,7 @@ public class ControladorGrafico implements Serializable {
         pieModel4.setShadow(false);
         pieModel4.setShowDataLabels(true);
         pieModel4.setExtender("ext");
+        pieModel4.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel4() {
@@ -411,6 +415,7 @@ public class ControladorGrafico implements Serializable {
         pieModel5.setShadow(false);
         pieModel5.setShowDataLabels(true);
         pieModel5.setExtender("ext");
+        pieModel5.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel5() {
@@ -440,6 +445,7 @@ public class ControladorGrafico implements Serializable {
         pieModel6.setShadow(false);
         pieModel6.setShowDataLabels(true);
         pieModel6.setExtender("ext");
+        pieModel6.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel6() {
@@ -469,6 +475,7 @@ public class ControladorGrafico implements Serializable {
         pieModel7.setShadow(false);
         pieModel7.setShowDataLabels(true);
         pieModel7.setExtender("ext");
+        pieModel7.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel7() {
@@ -498,6 +505,7 @@ public class ControladorGrafico implements Serializable {
         pieModel8.setShadow(false);
         pieModel8.setShowDataLabels(true);
         pieModel8.setExtender("ext");
+        pieModel8.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel8() {
@@ -527,6 +535,7 @@ public class ControladorGrafico implements Serializable {
         pieModel9.setShadow(false);
         pieModel9.setShowDataLabels(true);
         pieModel9.setExtender("ext");
+        pieModel9.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel9() {
@@ -556,6 +565,7 @@ public class ControladorGrafico implements Serializable {
         pieModel10.setShadow(false);
         pieModel10.setShowDataLabels(true);
         pieModel10.setExtender("ext");
+        pieModel10.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel10() {
@@ -585,6 +595,7 @@ public class ControladorGrafico implements Serializable {
         pieModel11.setShadow(false);
         pieModel11.setShowDataLabels(true);
         pieModel11.setExtender("ext");
+        pieModel11.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel11() {
@@ -614,6 +625,7 @@ public class ControladorGrafico implements Serializable {
         pieModel12.setShadow(false);
         pieModel12.setShowDataLabels(true);
         pieModel12.setExtender("ext");
+        pieModel12.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel12() {
@@ -643,6 +655,7 @@ public class ControladorGrafico implements Serializable {
         pieModel13.setShadow(false);
         pieModel13.setShowDataLabels(true);
         pieModel13.setExtender("ext");
+        pieModel13.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel13() {
@@ -672,6 +685,7 @@ public class ControladorGrafico implements Serializable {
         pieModel14.setShadow(false);
         pieModel14.setShowDataLabels(true);
         pieModel14.setExtender("ext");
+        pieModel14.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel14() {
@@ -701,6 +715,7 @@ public class ControladorGrafico implements Serializable {
         pieModel15.setShadow(false);
         pieModel15.setShowDataLabels(true);
         pieModel15.setExtender("ext");
+        pieModel15.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel15() {
@@ -730,6 +745,7 @@ public class ControladorGrafico implements Serializable {
         pieModel16.setShadow(false);
         pieModel16.setShowDataLabels(true);
         pieModel16.setExtender("ext");
+        pieModel16.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel16() {
@@ -759,6 +775,7 @@ public class ControladorGrafico implements Serializable {
         pieModel17.setShadow(false);
         pieModel17.setShowDataLabels(true);
         pieModel17.setExtender("ext");
+        pieModel17.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel17() {
@@ -788,6 +805,7 @@ public class ControladorGrafico implements Serializable {
         pieModel18.setShadow(false);
         pieModel18.setShowDataLabels(true);
         pieModel18.setExtender("ext");
+        pieModel18.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel18() {
@@ -817,6 +835,7 @@ public class ControladorGrafico implements Serializable {
         pieModel19.setShadow(false);
         pieModel19.setShowDataLabels(true);
         pieModel19.setExtender("ext");
+        pieModel19.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel19() {
@@ -846,6 +865,7 @@ public class ControladorGrafico implements Serializable {
         pieModel20.setShadow(false);
         pieModel20.setShowDataLabels(true);
         pieModel20.setExtender("ext");
+        pieModel20.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
     }
 
     public boolean resultadoPieModel20() {
