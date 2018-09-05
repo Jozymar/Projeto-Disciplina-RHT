@@ -14,7 +14,6 @@ import br.edu.ifpb.cultura.organizacional.interfaces.FuncaoDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.ImagemDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.InvestimentoEDespesasFamiliaresDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.LiderancaDao;
-import br.edu.ifpb.cultura.organizacional.interfaces.PoliticaEEconomiaDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.RedesSociaisDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.RemuneracaoDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.SaudeDao;
@@ -71,8 +70,6 @@ public class ControladorGrafico implements Serializable {
 
     private PieChartModel pieModel19;
 
-    private PieChartModel pieModel20;
-
     @EJB
     private AssistenciaAosFuncionariosDao assistenciaAosFuncionariosDao;
 
@@ -114,9 +111,6 @@ public class ControladorGrafico implements Serializable {
 
     @EJB
     private LiderancaDao liderancaDao;
-
-    @EJB
-    private PoliticaEEconomiaDao politicaEEconomiaDao;
 
     @EJB
     private RedesSociaisDao redesSociaisDao;
@@ -170,8 +164,6 @@ public class ControladorGrafico implements Serializable {
     private Long total18;
 
     private Long total19;
-
-    private Long total20;
 
     @PostConstruct
     public void init() {
@@ -254,10 +246,6 @@ public class ControladorGrafico implements Serializable {
         return pieModel19;
     }
 
-    public PieChartModel getPieModel20() {
-        return pieModel20;
-    }
-
     private void createPieModels() {
         createPieModel1();
         createPieModel2();
@@ -278,7 +266,6 @@ public class ControladorGrafico implements Serializable {
         createPieModel17();
         createPieModel18();
         createPieModel19();
-        createPieModel20();
     }
 
     private void createPieModel1() {
@@ -704,13 +691,13 @@ public class ControladorGrafico implements Serializable {
     private void createPieModel15() {
         pieModel15 = new PieChartModel();
 
-        pieModel15.set("Discordo Totalmente", politicaEEconomiaDao.consultarPorDiscordoTotalmente());
-        pieModel15.set("Discordo Moderadamente", politicaEEconomiaDao.consultarPorDiscordoModeradamente());
-        pieModel15.set("Não Concordo Nem Discordo", politicaEEconomiaDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel15.set("Concordo Moderadamente", politicaEEconomiaDao.consultarPorConcordoModeradamente());
-        pieModel15.set("Concordo Totalmente", politicaEEconomiaDao.consultarPorConcordoTotalmente());
+        pieModel15.set("Discordo Totalmente", redesSociaisDao.consultarPorDiscordoTotalmente());
+        pieModel15.set("Discordo Moderadamente", redesSociaisDao.consultarPorDiscordoModeradamente());
+        pieModel15.set("Não Concordo Nem Discordo", redesSociaisDao.consultarPorNaoConcordoNemDiscordo());
+        pieModel15.set("Concordo Moderadamente", redesSociaisDao.consultarPorConcordoModeradamente());
+        pieModel15.set("Concordo Totalmente", redesSociaisDao.consultarPorConcordoTotalmente());
 
-        pieModel15.setTitle("Política e Economia");
+        pieModel15.setTitle("Redes Sociais");
         pieModel15.setLegendPosition("e");
         pieModel15.setShadow(false);
         pieModel15.setShowDataLabels(true);
@@ -719,12 +706,12 @@ public class ControladorGrafico implements Serializable {
     }
 
     public boolean resultadoPieModel15() {
-        total15 = politicaEEconomiaDao.consultarPorDiscordoTotalmente()
-                + politicaEEconomiaDao.consultarPorDiscordoModeradamente()
-                + politicaEEconomiaDao.consultarPorNaoConcordoNemDiscordo()
-                + politicaEEconomiaDao.consultarPorConcordoModeradamente()
-                + politicaEEconomiaDao.consultarPorConcordoTotalmente();
-        if (((politicaEEconomiaDao.consultarPorDiscordoTotalmente() * 100) / total15) >= 30) {
+        total15 = redesSociaisDao.consultarPorDiscordoTotalmente()
+                + redesSociaisDao.consultarPorDiscordoModeradamente()
+                + redesSociaisDao.consultarPorNaoConcordoNemDiscordo()
+                + redesSociaisDao.consultarPorConcordoModeradamente()
+                + redesSociaisDao.consultarPorConcordoTotalmente();
+        if (((redesSociaisDao.consultarPorDiscordoTotalmente() * 100) / total15) >= 30) {
             return true;
         } else {
             return false;
@@ -734,13 +721,13 @@ public class ControladorGrafico implements Serializable {
     private void createPieModel16() {
         pieModel16 = new PieChartModel();
 
-        pieModel16.set("Discordo Totalmente", redesSociaisDao.consultarPorDiscordoTotalmente());
-        pieModel16.set("Discordo Moderadamente", redesSociaisDao.consultarPorDiscordoModeradamente());
-        pieModel16.set("Não Concordo Nem Discordo", redesSociaisDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel16.set("Concordo Moderadamente", redesSociaisDao.consultarPorConcordoModeradamente());
-        pieModel16.set("Concordo Totalmente", redesSociaisDao.consultarPorConcordoTotalmente());
+        pieModel16.set("Discordo Totalmente", remuneracaoDao.consultarPorDiscordoTotalmente());
+        pieModel16.set("Discordo Moderadamente", remuneracaoDao.consultarPorDiscordoModeradamente());
+        pieModel16.set("Não Concordo Nem Discordo", remuneracaoDao.consultarPorNaoConcordoNemDiscordo());
+        pieModel16.set("Concordo Moderadamente", remuneracaoDao.consultarPorConcordoModeradamente());
+        pieModel16.set("Concordo Totalmente", remuneracaoDao.consultarPorConcordoTotalmente());
 
-        pieModel16.setTitle("Redes Sociais");
+        pieModel16.setTitle("Remuneração");
         pieModel16.setLegendPosition("e");
         pieModel16.setShadow(false);
         pieModel16.setShowDataLabels(true);
@@ -749,12 +736,12 @@ public class ControladorGrafico implements Serializable {
     }
 
     public boolean resultadoPieModel16() {
-        total16 = redesSociaisDao.consultarPorDiscordoTotalmente()
-                + redesSociaisDao.consultarPorDiscordoModeradamente()
-                + redesSociaisDao.consultarPorNaoConcordoNemDiscordo()
-                + redesSociaisDao.consultarPorConcordoModeradamente()
-                + redesSociaisDao.consultarPorConcordoTotalmente();
-        if (((redesSociaisDao.consultarPorDiscordoTotalmente() * 100) / total16) >= 30) {
+        total16 = remuneracaoDao.consultarPorDiscordoTotalmente()
+                + remuneracaoDao.consultarPorDiscordoModeradamente()
+                + remuneracaoDao.consultarPorNaoConcordoNemDiscordo()
+                + remuneracaoDao.consultarPorConcordoModeradamente()
+                + remuneracaoDao.consultarPorConcordoTotalmente();
+        if (((remuneracaoDao.consultarPorDiscordoTotalmente() * 100) / total16) >= 30) {
             return true;
         } else {
             return false;
@@ -764,13 +751,13 @@ public class ControladorGrafico implements Serializable {
     private void createPieModel17() {
         pieModel17 = new PieChartModel();
 
-        pieModel17.set("Discordo Totalmente", remuneracaoDao.consultarPorDiscordoTotalmente());
-        pieModel17.set("Discordo Moderadamente", remuneracaoDao.consultarPorDiscordoModeradamente());
-        pieModel17.set("Não Concordo Nem Discordo", remuneracaoDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel17.set("Concordo Moderadamente", remuneracaoDao.consultarPorConcordoModeradamente());
-        pieModel17.set("Concordo Totalmente", remuneracaoDao.consultarPorConcordoTotalmente());
+        pieModel17.set("Discordo Totalmente", saudeDao.consultarPorDiscordoTotalmente());
+        pieModel17.set("Discordo Moderadamente", saudeDao.consultarPorDiscordoModeradamente());
+        pieModel17.set("Não Concordo Nem Discordo", saudeDao.consultarPorNaoConcordoNemDiscordo());
+        pieModel17.set("Concordo Moderadamente", saudeDao.consultarPorConcordoModeradamente());
+        pieModel17.set("Concordo Totalmente", saudeDao.consultarPorConcordoTotalmente());
 
-        pieModel17.setTitle("Remuneração");
+        pieModel17.setTitle("Saúde");
         pieModel17.setLegendPosition("e");
         pieModel17.setShadow(false);
         pieModel17.setShowDataLabels(true);
@@ -779,12 +766,12 @@ public class ControladorGrafico implements Serializable {
     }
 
     public boolean resultadoPieModel17() {
-        total17 = remuneracaoDao.consultarPorDiscordoTotalmente()
-                + remuneracaoDao.consultarPorDiscordoModeradamente()
-                + remuneracaoDao.consultarPorNaoConcordoNemDiscordo()
-                + remuneracaoDao.consultarPorConcordoModeradamente()
-                + remuneracaoDao.consultarPorConcordoTotalmente();
-        if (((remuneracaoDao.consultarPorDiscordoTotalmente() * 100) / total17) >= 30) {
+        total17 = saudeDao.consultarPorDiscordoTotalmente()
+                + saudeDao.consultarPorDiscordoModeradamente()
+                + saudeDao.consultarPorNaoConcordoNemDiscordo()
+                + saudeDao.consultarPorConcordoModeradamente()
+                + saudeDao.consultarPorConcordoTotalmente();
+        if (((saudeDao.consultarPorDiscordoTotalmente() * 100) / total17) >= 30) {
             return true;
         } else {
             return false;
@@ -794,13 +781,13 @@ public class ControladorGrafico implements Serializable {
     private void createPieModel18() {
         pieModel18 = new PieChartModel();
 
-        pieModel18.set("Discordo Totalmente", saudeDao.consultarPorDiscordoTotalmente());
-        pieModel18.set("Discordo Moderadamente", saudeDao.consultarPorDiscordoModeradamente());
-        pieModel18.set("Não Concordo Nem Discordo", saudeDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel18.set("Concordo Moderadamente", saudeDao.consultarPorConcordoModeradamente());
-        pieModel18.set("Concordo Totalmente", saudeDao.consultarPorConcordoTotalmente());
+        pieModel18.set("Discordo Totalmente", situacaoFinanceiraDao.consultarPorDiscordoTotalmente());
+        pieModel18.set("Discordo Moderadamente", situacaoFinanceiraDao.consultarPorDiscordoModeradamente());
+        pieModel18.set("Não Concordo Nem Discordo", situacaoFinanceiraDao.consultarPorNaoConcordoNemDiscordo());
+        pieModel18.set("Concordo Moderadamente", situacaoFinanceiraDao.consultarPorConcordoModeradamente());
+        pieModel18.set("Concordo Totalmente", situacaoFinanceiraDao.consultarPorConcordoTotalmente());
 
-        pieModel18.setTitle("Saúde");
+        pieModel18.setTitle("Situação Financeira");
         pieModel18.setLegendPosition("e");
         pieModel18.setShadow(false);
         pieModel18.setShowDataLabels(true);
@@ -809,12 +796,12 @@ public class ControladorGrafico implements Serializable {
     }
 
     public boolean resultadoPieModel18() {
-        total18 = saudeDao.consultarPorDiscordoTotalmente()
-                + saudeDao.consultarPorDiscordoModeradamente()
-                + saudeDao.consultarPorNaoConcordoNemDiscordo()
-                + saudeDao.consultarPorConcordoModeradamente()
-                + saudeDao.consultarPorConcordoTotalmente();
-        if (((saudeDao.consultarPorDiscordoTotalmente() * 100) / total18) >= 30) {
+        total18 = situacaoFinanceiraDao.consultarPorDiscordoTotalmente()
+                + situacaoFinanceiraDao.consultarPorDiscordoModeradamente()
+                + situacaoFinanceiraDao.consultarPorNaoConcordoNemDiscordo()
+                + situacaoFinanceiraDao.consultarPorConcordoModeradamente()
+                + situacaoFinanceiraDao.consultarPorConcordoTotalmente();
+        if (((situacaoFinanceiraDao.consultarPorDiscordoTotalmente() * 100) / total18) >= 30) {
             return true;
         } else {
             return false;
@@ -824,13 +811,13 @@ public class ControladorGrafico implements Serializable {
     private void createPieModel19() {
         pieModel19 = new PieChartModel();
 
-        pieModel19.set("Discordo Totalmente", situacaoFinanceiraDao.consultarPorDiscordoTotalmente());
-        pieModel19.set("Discordo Moderadamente", situacaoFinanceiraDao.consultarPorDiscordoModeradamente());
-        pieModel19.set("Não Concordo Nem Discordo", situacaoFinanceiraDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel19.set("Concordo Moderadamente", situacaoFinanceiraDao.consultarPorConcordoModeradamente());
-        pieModel19.set("Concordo Totalmente", situacaoFinanceiraDao.consultarPorConcordoTotalmente());
+        pieModel19.set("Discordo Totalmente", vidaSocialDao.consultarPorDiscordoTotalmente());
+        pieModel19.set("Discordo Moderadamente", vidaSocialDao.consultarPorDiscordoModeradamente());
+        pieModel19.set("Não Concordo Nem Discordo", vidaSocialDao.consultarPorNaoConcordoNemDiscordo());
+        pieModel19.set("Concordo Moderadamente", vidaSocialDao.consultarPorConcordoModeradamente());
+        pieModel19.set("Concordo Totalmente", vidaSocialDao.consultarPorConcordoTotalmente());
 
-        pieModel19.setTitle("Situação Financeira");
+        pieModel19.setTitle("Vida Social");
         pieModel19.setLegendPosition("e");
         pieModel19.setShadow(false);
         pieModel19.setShowDataLabels(true);
@@ -839,42 +826,12 @@ public class ControladorGrafico implements Serializable {
     }
 
     public boolean resultadoPieModel19() {
-        total19 = situacaoFinanceiraDao.consultarPorDiscordoTotalmente()
-                + situacaoFinanceiraDao.consultarPorDiscordoModeradamente()
-                + situacaoFinanceiraDao.consultarPorNaoConcordoNemDiscordo()
-                + situacaoFinanceiraDao.consultarPorConcordoModeradamente()
-                + situacaoFinanceiraDao.consultarPorConcordoTotalmente();
-        if (((situacaoFinanceiraDao.consultarPorDiscordoTotalmente() * 100) / total19) >= 30) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private void createPieModel20() {
-        pieModel20 = new PieChartModel();
-
-        pieModel20.set("Discordo Totalmente", vidaSocialDao.consultarPorDiscordoTotalmente());
-        pieModel20.set("Discordo Moderadamente", vidaSocialDao.consultarPorDiscordoModeradamente());
-        pieModel20.set("Não Concordo Nem Discordo", vidaSocialDao.consultarPorNaoConcordoNemDiscordo());
-        pieModel20.set("Concordo Moderadamente", vidaSocialDao.consultarPorConcordoModeradamente());
-        pieModel20.set("Concordo Totalmente", vidaSocialDao.consultarPorConcordoTotalmente());
-
-        pieModel20.setTitle("Vida Social");
-        pieModel20.setLegendPosition("e");
-        pieModel20.setShadow(false);
-        pieModel20.setShowDataLabels(true);
-        pieModel20.setExtender("ext");
-        pieModel20.setSeriesColors("FF0000, ff8c00, ffd700, 228B22, 1E90FF");
-    }
-
-    public boolean resultadoPieModel20() {
-        total20 = vidaSocialDao.consultarPorDiscordoTotalmente()
+        total19 = vidaSocialDao.consultarPorDiscordoTotalmente()
                 + vidaSocialDao.consultarPorDiscordoModeradamente()
                 + vidaSocialDao.consultarPorNaoConcordoNemDiscordo()
                 + vidaSocialDao.consultarPorConcordoModeradamente()
                 + vidaSocialDao.consultarPorConcordoTotalmente();
-        if (((vidaSocialDao.consultarPorDiscordoTotalmente() * 100) / total20) >= 30) {
+        if (((vidaSocialDao.consultarPorDiscordoTotalmente() * 100) / total19) >= 30) {
             return true;
         } else {
             return false;

@@ -1,9 +1,7 @@
 package br.edu.ifpb.cultura.organizacional.controladores;
 
-import br.edu.ifpb.cultura.organizacional.entidades.Associacao;
 import br.edu.ifpb.cultura.organizacional.entidades.FeriasELazer;
 import br.edu.ifpb.cultura.organizacional.entidades.Usuario;
-import br.edu.ifpb.cultura.organizacional.interfaces.AssociacaoDao;
 import br.edu.ifpb.cultura.organizacional.interfaces.FeriasELazerDao;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
@@ -36,7 +34,7 @@ public class ControladorFeriasELazer implements Serializable {
 
     public String cadastrar() {
         feriasELazerDao.cadastrar(feriasELazer);
-        return "pagina20.xhtml";
+        return "fim.xhtml";
     }
 
     public FeriasELazer getFeriasELazer() {

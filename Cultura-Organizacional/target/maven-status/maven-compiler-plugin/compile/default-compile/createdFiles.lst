@@ -46,10 +46,8 @@ br/edu/ifpb/cultura/organizacional/entidades/SituacaoFinanceira.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorFormacao.class
 br/edu/ifpb/cultura/organizacional/daos/FormacaoDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/Imagem_.class
-br/edu/ifpb/cultura/organizacional/daos/PoliticaEEconomiaDaoImpl.class
 br/edu/ifpb/cultura/organizacional/daos/CondicoesDeTrabalhoDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/Lideranca_.class
-br/edu/ifpb/cultura/organizacional/entidades/PoliticaEEconomia.class
 br/edu/ifpb/cultura/organizacional/entidades/Remuneracao_.class
 br/edu/ifpb/cultura/organizacional/entidades/InvestimentoEDespesasFamiliares.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorVidaSocial.class
@@ -59,7 +57,6 @@ br/edu/ifpb/cultura/organizacional/entidades/Usuario.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorUsuario.class
 br/edu/ifpb/cultura/organizacional/interfaces/FeriasELazerDao.class
 br/edu/ifpb/cultura/organizacional/interfaces/EstrategiaDao.class
-br/edu/ifpb/cultura/organizacional/interfaces/PoliticaEEconomiaDao.class
 br/edu/ifpb/cultura/organizacional/interfaces/AdminDao.class
 br/edu/ifpb/cultura/organizacional/entidades/EspiritoDeEquipe.class
 br/edu/ifpb/cultura/organizacional/interfaces/InvestimentoEDespesasFamiliaresDao.class
@@ -86,7 +83,6 @@ br/edu/ifpb/cultura/organizacional/daos/FuncaoDaoImpl.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorSituacaoFinanceira.class
 br/edu/ifpb/cultura/organizacional/interfaces/RedesSociaisDao.class
 br/edu/ifpb/cultura/organizacional/daos/SaudeDaoImpl.class
-br/edu/ifpb/cultura/organizacional/entidades/PoliticaEEconomia_.class
 br/edu/ifpb/cultura/organizacional/entidades/AvaliacaoMotivacao.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorImagem.class
 br/edu/ifpb/cultura/organizacional/daos/AdminDaoImpl.class
@@ -105,7 +101,6 @@ br/edu/ifpb/cultura/organizacional/daos/AssistenciaAosFuncionariosDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/FeriasELazer_.class
 br/edu/ifpb/cultura/organizacional/daos/EstrategiaDaoImpl.class
 br/edu/ifpb/cultura/organizacional/entidades/SituacaoFinanceira_.class
-br/edu/ifpb/cultura/organizacional/controladores/ControladorPoliticaEEconomia.class
 br/edu/ifpb/cultura/organizacional/controladores/ControladorInvestimentoEDespesasFamiliares.class
 br/edu/ifpb/cultura/organizacional/interfaces/SituacaoFinanceiraDao.class
 br/edu/ifpb/cultura/organizacional/entidades/ConvivenciaFamiliar.class

@@ -6,7 +6,6 @@
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/EnvolvimentoDao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/entidades/Saude.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorRemuneracao.java
-/home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorPoliticaEEconomia.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorFeriasELazer.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/AvaliacaoMotivacaoDao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/FuncaoDao.java
@@ -17,7 +16,6 @@
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/AssociacaoDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/SituacaoFinanceiraDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/RemuneracaoDao.java
-/home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/PoliticaEEconomiaDao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorVidaSocial.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorEnvolvimento.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/VidaSocialDaoImpl.java
@@ -45,7 +43,6 @@
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/EstrategiaDao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/LiderancaDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/AdminDaoImpl.java
-/home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/entidades/PoliticaEEconomia.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/AvaliacaoMotivacaoDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/ConvivenciaFamiliarDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/entidades/InvestimentoEDespesasFamiliares.java
@@ -58,7 +55,6 @@
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/UsuarioDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/entidades/Usuario.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/FuncaoDaoImpl.java
-/home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/daos/PoliticaEEconomiaDaoImpl.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/interfaces/SituacaoFinanceiraDao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/controladores/ControladorAssociacao.java
 /home/jozimar/NetBeansProjects/Cultura-Organizacional/src/main/java/br/edu/ifpb/cultura/organizacional/entidades/Associacao.java
